@@ -87,10 +87,34 @@ const people = [
 	}
 ];
 let combinedAge = 0;
+let averageAge = 0;
 
 // Skriv koden for oppgave 1 her
 
-let averageAge = 0;
+for (let i = 0; i < people.length; i++) { 
+    if (people[i].name === "Otto") {
+        continue
+    } else {
+        people[i].city = cities[Math.floor(Math.random() * cities.length)]
+        if (people[i].male === true) {
+            people[i].title = "Mr."
+        } else {
+            people[i].title = "Ms."
+        }
+        let count = people.length;
+        people[i].age = people[i].age + 2
+        people[i].hobbies.unshift("coding")
+        combinedAge += people[i].age
+        averageAge = combinedAge / (count);
+    }
+    
+}
+
+console.log(people)
+console.log(combinedAge)
+console.log(averageAge)
+
+
 
 /******************************************************************************
 2.
