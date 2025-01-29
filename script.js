@@ -138,6 +138,20 @@ diceRoller(5, 20) skal returnere et array med 5 tilfeldige tall fra 1-20.
 
 // Skriv koden for oppgave 2 her
 
+
+function diceRoller (numberDice, sides) {
+    const result = []
+
+    for (let i = 0; i < numberDice; i++) {
+        const diceRoll = Math.floor(Math.random() * sides) + 1
+        result.push(diceRoll)
+    }
+    
+    return result
+}
+
+console.log(diceRoller(4, 10));
+
 /******************************************************************************
 3.
 
@@ -165,6 +179,19 @@ skal returnere:
 
 // Skriv koden for oppgave 3 her
 
+const thisFunction = (strings) => {
+    const cleanedStrings = []
+    for (let str of strings) {
+        const cleanedStr = str.trim().toLocaleLowerCase()
+        cleanedStrings.push(cleanedStr)
+    }
+    return cleanedStrings.join(" ")
+}
+
+const thisFunctionResult = thisFunction([" thIS", "teXt  ", " nEeds ", "to", "BE", "cleANED   ", " Up"])
+
+console.log(thisFunctionResult)
+
 /******************************************************************************
 4.
 
@@ -190,10 +217,25 @@ skal returnere "whao is ohe ptino tf ohis?"
 
 ******************************************************************************/
 
+
 function doubleSwap(string, charA, charB) {
-	// Skriv koden for oppgave 4 her
+	newString = []
+
+    for (let char of string) {
+        if (char === charA) {
+            newString += charB
+        } else if (char === charB) {
+            newString += charA
+        } else {
+            newString += char
+        }
+    } 
+    return newString
 }
 
+const swappedResult = doubleSwap("m#ybe #nother #ppro#ch is necess#ry", "#", "a")
+
+console.log(swappedResult);
 /******************************************************************************
 5.
 
@@ -236,4 +278,7 @@ const greetings = [
   "Good afternoon gentlemen!"
 ];
 
+const helloChecker = () => {
+
+}
 // Skriv koden for oppgave 5 her
