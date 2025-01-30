@@ -278,7 +278,17 @@ const greetings = [
   "Good afternoon gentlemen!"
 ];
 
-const helloChecker = () => {
 
-}
 // Skriv koden for oppgave 5 her
+
+// const helloChecker = (inputString) => {
+// 	const greetingsLang = {
+// 		english: "hello",
+//     	italian: "ciao",
+//     	french: "salut",
+//     	german: "hallo",
+//     	spanish: "hola",
+//     	polish: "czesc"
+// 	}
+	
+// }
